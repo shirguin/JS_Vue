@@ -1,1 +1,327 @@
 @import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $backgroundColorSite;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  margin-left: calc(50% - $widthSite / 2);
+  margin-right: calc(50% - $widthSite / 2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+
+    &__link {
+      text-decoration: none;
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 125%;
+      color: #292f36;
+    }
+  }
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  width: $widthSite;
+  height: 758px;
+  margin-top: 57px;
+  background-image: url(./img/Photo_1.png);
+  border-radius: $borderRadius;
+
+  &__heading {
+    width: 434px;
+    height: 162px;
+    margin-left: 52px;
+    margin-top: 208px;
+    font-family: "DM Serif Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 125%;
+    color: $headingTextColor;
+  }
+
+  &__text {
+    width: 433px;
+    height: 66px;
+    margin-left: 52px;
+    margin-top: 18px;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: $textColor;
+  }
+
+  &__button {
+    width: 220.14px;
+    height: 75px;
+    margin-left: 52px;
+    margin-top: 21px;
+    background: #292f36;
+    box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+    border-radius: 18px;
+
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__text span {
+      color: $backgroundColorSite;
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    width: 451px;
+    height: 63px;
+    margin-top: 96px;
+    font-family: "DM Serif Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 125%;
+    color: $headingTextColor;
+  }
+
+  &__text {
+    width: 737px;
+    height: 66px;
+    margin-top: 8px;
+    text-align: center;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: $textColor;
+  }
+
+  &__content {
+    width: $widthSite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 37px;
+
+    &__item {
+      width: 525px;
+      margin-top: 56px;
+
+      &__img {
+        width: 525px;
+        height: 548px;
+      }
+
+      &__lowerBlock {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 28px;
+
+        &__left {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      &__heading {
+        width: 184px;
+        height: 31px;
+        font-family: "DM Serif Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 125%;
+        color: $headingTextColor;
+      }
+
+      &__text {
+        width: 217px;
+        height: 27px;
+        margin-bottom: 4px;
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        color: $textColor;
+      }
+    }
+  }
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 96px;
+  background-color: $backgroundColorCounter;
+  height: 457px;
+
+  &__tablo {
+    display: flex;
+    justify-content: space-around;
+    width: 1082px;
+    height: 155px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+      width: 192;
+      height: 155px;
+
+      &__number {
+        font-family: "DM Serif Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 85px;
+        line-height: 125%;
+        color: $numberCounterColor;
+      }
+
+      &__text {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        color: $textColor;
+      }
+
+      &__gap {
+        width: 2px;
+        height: 155px;
+        border-left: 1px solid $numberCounterColor;
+      }
+    }
+  }
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $widthSite;
+  margin-top: 96px;
+
+  &__heading {
+    width: 362px;
+    font-family: "DM Serif Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 125%;
+    color: $headingTextColor;
+  }
+
+  &__text {
+    width: 811px;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: $textColor;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  &__content {
+    margin-top: 52px;
+    width: $widthSite;
+    display: flex;
+    justify-content: space-between;
+
+    &__item:hover svg {
+      fill: $backgroundColorSite;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 382px;
+      border-radius: $borderRadius;
+      border: $borderArticle;
+
+      &:hover {
+        background-color: #f4f0ec;
+      }
+
+      &:hover circle {
+        fill: $backgroundColorSite;
+      }
+
+      &__img {
+        margin: 21px;
+      }
+
+      &__heading {
+        margin-left: 21px;
+        width: 305px;
+        font-family: "DM Serif Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 125%;
+        color: $headingTextColor;
+      }
+
+      &__lowerBlock {
+        margin-top: 30px;
+        margin-bottom: 38px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text {
+          margin-left: 21px;
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: $textColor;
+        }
+
+        &__link {
+          margin-right: 21px;
+        }
+      }
+    }
+  }
+}
