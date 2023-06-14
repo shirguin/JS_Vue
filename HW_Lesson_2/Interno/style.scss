@@ -9,11 +9,6 @@ body {
   background: $backgroundColorSite;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
 .center {
   margin-left: calc(50% - $widthSite / 2);
   margin-right: calc(50% - $widthSite / 2);
@@ -349,11 +344,10 @@ body {
 .footer {
   margin-top: 96px;
   display: flex;
+  justify-content: space-between;
 
   &__left {
     width: 393px;
-
-    border: $borderArticle;
 
     &__text {
       margin-top: 18px;
@@ -366,6 +360,78 @@ body {
       line-height: 150%;
       letter-spacing: 0.01em;
       color: $textColor;
+    }
+
+    &__icons {
+      margin-top: 31px;
+      display: flex;
+      gap: 54px;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 152px;
+
+    &__heading {
+      font-family: "DM Serif Display";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 125%;
+      color: $headingTextColor;
+    }
+
+    &__nav {
+      margin-top: 9px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 72px;
+      height: 198px;
+
+      &__link {
+        text-decoration: none;
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 300%;
+        color: $textColor;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+      font-family: "DM Serif Display";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 125%;
+      color: $textColor;
+    }
+
+    &__content {
+        margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 258px;
+      height: 215px;
+
+      &__item {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        color: $textColor;
+      }
     }
   }
 }
