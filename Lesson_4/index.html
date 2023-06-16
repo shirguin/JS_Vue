@@ -26,16 +26,39 @@
         <h2>Задание 3</h2>
         <ul>
           <li v-for="item in items" :key="item.id">
-            <input
-              @input="replacingValue(value)"
-              type="number"
-              :value="item.quantity"
-            />
+            <input v-model="item.quantity" type="number" />
             <label>
-              <input type="checkbox" :id="key" />
+              <input type="checkbox" />
+              <span>{{item.name}}</span>
             </label>
+          </li>
+        </ul>
+      </div>
 
-            <span>{{item.name}}</span>
+      <div>
+        <h2>Задание 4</h2>
+        <!-- <form action="#" v-on:submit.prevent="onSubmit"> -->
+          <label for="fname">Имя:</label><br />
+          <input
+            v-model="firstName"
+            type="text"
+            id="fname"
+            name="fname"
+          /><br />
+          <label for="lname">Фамилия:</label><br />
+          <input v-model="lastName" type="text" id="lname" name="lname" /><br />
+          <label for="email">Email:</label><br />
+          <input
+            v-model="email"
+            type="email"
+            id="email"
+            name="email"
+          /><br /><br />
+          <button @click="addContact">Добавить контакт</button>
+        <!-- </form> -->
+        <ul>
+          <li v-for="contact in contacts">
+            {{contact.firstName}} {{contact.lastName}} - {{contact.email}}
           </li>
         </ul>
       </div>
@@ -63,6 +86,10 @@
             { id: 2, name: "Яблоки", quantity: 5 },
             { id: 3, name: "Мясо", quantity: 0 },
           ],
+          firstName: "",
+          lastName: "",
+          email: "",
+          contacts: [],
         },
         methods: {
           sales() {
@@ -71,7 +98,28 @@
               this.flag = false;
             }
           },
-          replacingValue(value) {},
+
+          addContact() {
+            if (!this.firstName) {
+              alert("Введите Имя");
+              return;
+            } else if (!this.lastName) {
+              alert("Введите Фамилию");
+              return;
+            } else if (!this.email) {
+              alert("Введите Email");
+              return;
+            }
+            let contact = {
+              firstName: this.firstName,
+              lastName: this.lastName,
+              email: this.email,
+            };
+            this.contacts.push(contact);
+            this.firstName="";
+            this.lastName="";
+            this.email="";
+          },
         },
       });
     </script>
