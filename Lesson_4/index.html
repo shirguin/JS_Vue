@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 4</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="product">
+        <h2>Задание 1</h2>
+        <p>Название товара: {{ product.name }}</p>
+        <p>Цена товара: {{ product.price }}</p>
+        <a :href="product.url">Страница товара</a>
+
+        <button @click="sales()">Скидка 20%</button>
+      </div>
+      <div class="users">
+        <h2>Задание 2</h2>
+        <ul>
+          <li v-for="user in users">{{user.name}} {{user.age}} лет</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Задание 3</h2>
+        <ul>
+          <li v-for="item in items" :key="item.id">
+            <input
+              @input="replacingValue(value)"
+              type="number"
+              :value="item.quantity"
+            />
+            <label>
+              <input type="checkbox" :id="key" />
+            </label>
+
+            <span>{{item.name}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          product: {
+            name: "Принтер",
+            price: 25500,
+            url: "https://dzen.ru/?clid=2630729-173&from=chromehp&win=592&yredirect=true",
+          },
+          flag: true,
+          users: [
+            { name: "Alex", age: 25 },
+            { name: "Svetlana", age: 35 },
+            { name: "Oleg", age: 42 },
+          ],
+          items: [
+            { id: 0, name: "Молоко", quantity: 2 },
+            { id: 1, name: "Хлеб", quantity: 1 },
+            { id: 2, name: "Яблоки", quantity: 5 },
+            { id: 3, name: "Мясо", quantity: 0 },
+          ],
+        },
+        methods: {
+          sales() {
+            if (this.flag) {
+              this.product.price = this.product.price * 0.8;
+              this.flag = false;
+            }
+          },
+          replacingValue(value) {},
+        },
+      });
+    </script>
+  </body>
+</html>
