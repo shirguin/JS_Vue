@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW Lesson 4</title>
+  </head>
+  <body>
+    <div id="app">
+        <div class="products">
+            <h2>Список товаров</h2>
+            <ul>
+                <li v-for="product in products">{{product.name}} - {{product.price}}</li>
+            </ul>
+            <button @click="toUp">По возрастанию</button>
+            <button @click="toDown">По убыванию</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          products: [
+            { id: 0, name: "Джемпер", price: 3500 },
+            { id: 1, name: "Рубашка мужская", price: 1300 },
+            { id: 2, name: "Джинсы женские", price: 2500 },
+            { id: 3, name: "Блузка женская", price: 3000 },
+            { id: 4, name: "Футболка", price: 900 },
+            { id: 5, name: "Костюм спортивный", price: 5000 },
+            { id: 6, name: "Ремень", price: 1400 },
+          ],
+        },
+        methods:{
+            toUp(){
+                this.products.sort((a, b)=> a.price - b.price);
+            },
+
+            toDown(){
+                this.products.sort((a, b)=> b.price - a.price);
+            }
+        }
+      });
+    </script>
+  </body>
+</html>

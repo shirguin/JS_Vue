@@ -386,4 +386,116 @@ body {
   font-size: 22px;
   line-height: 150%;
   color: #4d5053;
+}
+
+.blogBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blogBanner__img {
+  position: relative;
+  width: 1920px;
+  height: 350px;
+}
+.blogBanner__nav {
+  position: absolute;
+  top: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 503px;
+  height: 178px;
+  background-color: #ffffff;
+  border-radius: 37px 37px 0px 0px;
+}
+.blogBanner__nav__title {
+  padding-top: 41px;
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 125%;
+  color: #292f36;
+}
+.blogBanner__nav__linke {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  color: #4d5053;
+}
+.blogBanner__nav__linke a {
+  text-decoration: none;
+}
+
+.blogLatestPost {
+  display: flex;
+  flex-direction: column;
+}
+.blogLatestPost__title {
+  margin-top: 200px;
+  margin-left: 360px;
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #292f36;
+}
+.blogLatestPost__content {
+  display: flex;
+  gap: 60px;
+}
+.blogLatestPost__content__img {
+  margin-top: 33px;
+  border-radius: 50px;
+}
+.blogLatestPost__content__right {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.blogLatestPost__content__right__title {
+  width: 463px;
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #292f36;
+  margin-bottom: 22px;
+}
+.blogLatestPost__content__right__text {
+  width: 469px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #4d5053;
+  margin-bottom: 50px;
+}
+.blogLatestPost__content__right__date {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #4d5053;
+}
+.blogLatestPost__content__right__button svg {
+  width: 52px;
+  height: 52px;
+}
+.blogLatestPost__content__right__bottom {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
