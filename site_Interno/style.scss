@@ -417,7 +417,7 @@ body {
     }
 
     &__content {
-        margin-top: 26px;
+      margin-top: 26px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -431,6 +431,132 @@ body {
         font-size: 22px;
         line-height: 150%;
         color: $textColor;
+      }
+    }
+  }
+}
+
+.blogBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    position: relative;
+    width: 1920px;
+    height: 350px;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 503px;
+    height: 178px;
+    background-color: $backgroundColorSite;
+    border-radius: 37px 37px 0px 0px;
+
+    &__title {
+      padding-top: 41px;
+      font-family: "DM Serif Display";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 125%;
+      color: $headingTextColor;
+    }
+
+    &__linke {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 150%;
+      color: $textColor;
+    }
+
+    &__linke a {
+      text-decoration: none;
+    }
+  }
+}
+
+.blogLatestPost {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-top: 200px;
+    margin-left: 360px;
+    font-family: "DM Serif Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: $headingTextColor;
+  }
+
+  &__content {
+    display: flex;
+    gap: 60px;
+
+    &__img {
+      margin-top: 33px;
+      border-radius: $borderRadius;
+    }
+
+    &__right {
+      width: 470px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__title {
+        width: 463px;
+        font-family: "DM Serif Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 125%;
+        letter-spacing: 0.02em;
+        color: $headingTextColor;
+        margin-bottom: 22px;
+      }
+
+      &__text {
+        width: 469px;
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: $textColor;
+        margin-bottom: 50px;
+      }
+
+      &__date {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: $textColor;
+      }
+
+      &__button svg{
+        width: 52px;
+        height: 52px;
+      }
+
+      &__bottom{
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
