@@ -284,6 +284,7 @@ body {
 
       &__img {
         margin: 21px;
+        border-radius: $borderRadius $borderRadius 0 0;
 
         &__style {
           position: absolute;
@@ -549,14 +550,72 @@ body {
         color: $textColor;
       }
 
-      &__button svg{
+      &__button svg {
         width: 52px;
         height: 52px;
       }
 
-      &__bottom{
+      &__bottom {
         display: flex;
         justify-content: space-between;
+      }
+    }
+  }
+}
+
+.blogArticles {
+  margin-top: 156px;
+
+  &__heading {
+    width: 362px;
+    font-family: "DM Serif Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 125%;
+    color: $headingTextColor;
+  }
+
+  &__content {
+    margin-top: 30px;
+    width: $widthSite;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__pagination {
+      margin-top: 60px;
+      margin-bottom: 200px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+        text-decoration: none;
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        text-transform: capitalize;
+        color: $headingTextColor;
+        border: 1px solid #cda274;
+        border-radius: 50%;
+        box-sizing: border-box;
+
+        &__active {
+          background: #f4f0ec;
+          border: none;
+        }
+
+        &:hover {
+          background: #f4f0ec;
+        }
       }
     }
   }

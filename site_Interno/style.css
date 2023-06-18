@@ -256,6 +256,7 @@ body {
 }
 .articles__content__item__img {
   margin: 21px;
+  border-radius: 50px 50px 0 0;
 }
 .articles__content__item__img__style {
   position: absolute;
@@ -498,4 +499,56 @@ body {
 .blogLatestPost__content__right__bottom {
   display: flex;
   justify-content: space-between;
+}
+
+.blogArticles {
+  margin-top: 156px;
+}
+.blogArticles__heading {
+  width: 362px;
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 125%;
+  color: #292f36;
+}
+.blogArticles__content {
+  margin-top: 30px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.blogArticles__content__pagination {
+  margin-top: 60px;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.blogArticles__content__pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  text-decoration: none;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #292f36;
+  border: 1px solid #cda274;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.blogArticles__content__pagination__button__active {
+  background: #f4f0ec;
+  border: none;
+}
+.blogArticles__content__pagination__button:hover {
+  background: #f4f0ec;
 }/*# sourceMappingURL=style.css.map */
