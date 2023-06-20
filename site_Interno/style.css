@@ -395,13 +395,14 @@ body {
   align-items: center;
 }
 .blogBanner__img {
+  margin-top: 44px;
   position: relative;
   width: 1920px;
   height: 350px;
 }
 .blogBanner__nav {
   position: absolute;
-  top: 270px;
+  top: 314px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -551,4 +552,26 @@ body {
 }
 .blogArticles__content__pagination__button:hover {
   background: #f4f0ec;
+}
+
+.blogDetailsContent {
+  display: flex;
+  gap: 56px;
+}
+.blogDetailsContent__leftBlock {
+  width: 910px;
+}
+.blogDetailsContent__leftBlock__item {
+  display: flex;
+  flex-direction: column;
+}
+.blogDetailsContent__leftBlock__item__title {
+  width: 684px;
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #292f36;
 }/*# sourceMappingURL=style.css.map */

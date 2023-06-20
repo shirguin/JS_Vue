@@ -443,6 +443,7 @@ body {
   align-items: center;
 
   &__img {
+    margin-top: 44px;
     position: relative;
     width: 1920px;
     height: 350px;
@@ -450,7 +451,7 @@ body {
 
   &__nav {
     position: absolute;
-    top: 270px;
+    top: 314px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -618,5 +619,33 @@ body {
         }
       }
     }
+  }
+}
+
+.blogDetailsContent {
+  display: flex;
+  gap: 56px;
+
+  &__leftBlock {
+    width: 910px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        width: 684px;
+        font-family: "DM Serif Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 125%;
+        letter-spacing: 0.02em;
+        color: $headingTextColor;
+      }
+    }
+  }
+
+  &__rightBlock {
   }
 }
