@@ -57,5 +57,20 @@ new Vue({
         href: "blog_details.html",
       },
     ],
+    detailedArticles:[
+      {
+        id: 0,
+        title_1: "Let’s Get Solution for Building Construction Work",
+        img_1_src: "./img/Photo_15.png",
+        img_1_alt: "Photo_15",
+        text_1: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
+        text_2: "Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+        title_2: "Design sprints are great",
+        text_3: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.",
+        img_2_src: "./img/Photo_16.png",
+        img_2_alt: "Photo_16",
+        text_4: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.",
+      }
+    ]
   },
 });
