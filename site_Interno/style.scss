@@ -623,11 +623,12 @@ body {
 }
 
 .blogDetailsContent {
+  margin-top: 200px;
   display: flex;
   gap: 56px;
 
   &__leftBlock {
-    width: 910px;
+    width: 800px;
 
     &__item {
       display: flex;
@@ -643,9 +644,137 @@ body {
         letter-spacing: 0.02em;
         color: $headingTextColor;
       }
+
+      &__img {
+        width: 800px;
+        margin-top: 11px;
+        border-radius: $borderRadius;
+      }
+
+      &__dateBlock {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        &__date {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: $textColor;
+          letter-spacing: 0.01em;
+          text-transform: capitalize;
+        }
+
+        &__nav {
+          display: flex;
+          gap: 10px;
+        }
+
+        &__nav a {
+          text-decoration: none;
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: 0.01em;
+          text-transform: capitalize;
+          color: $textColor;
+        }
+      }
+
+      &__text {
+        width: 800px;
+        margin-top: 32px;
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: $textColor;
+      }
+
+      &__insert {
+        margin-top: 35px;
+        margin-bottom: 27px;
+        width: 800px;
+        height: 267px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #f4f0ec;
+        border-radius: $borderRadius;
+
+        &__heading {
+          width: 345px;
+          font-family: "DM Serif Display";
+          font-style: italic;
+          font-weight: 400;
+          font-size: 25px;
+          line-height: 125%;
+          text-align: center;
+          letter-spacing: 0.02em;
+          color: #cda274;
+        }
+      }
+
+      & ol {
+        list-style-type: none;
+        counter-reset: num;
+        margin: 0 0 0 35px;
+        padding: 15px 0 5px 0;
+        font-size: 18px;
+      }
+
+      & ol li {
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
+
+      & ol li:before {
+        content: counter(num);
+        counter-increment: num;
+        display: inline-block;
+        position: absolute;
+        top: 5px;
+        left: -40px;
+        width: 15px;
+        color: #ef6780;
+        text-align: right;
+
+        font-family: "DM Serif Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 125%;
+        letter-spacing: 0.02em;
+        color: #cda274;
+      }
+
+      &__img2 {
+        width: 800px;
+        margin-top: 35px;
+        border-radius: $borderRadius;
+      }
     }
   }
 
   &__rightBlock {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-family: "DM Serif Display";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 125%;
+      color: $headingTextColor;
+    }
   }
 }
