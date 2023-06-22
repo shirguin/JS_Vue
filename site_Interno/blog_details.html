@@ -27,7 +27,7 @@
       <section class="blogDetailsContent center">
         <div class="blogDetailsContent__leftBlock">
           <detailed-article
-            v-for="article in detailedArticles"
+            v-for="article in filterList"
             :key="article.id"
             :article="article"
           ></detailed-article>
@@ -40,6 +40,7 @@
               v-for="tag in tags"
               :key="tag.id"
               :tag="tag"
+              :filter="filter"
             ></button-tag>
           </div>
         </div>

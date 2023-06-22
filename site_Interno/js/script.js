@@ -110,7 +110,7 @@ new Vue({
       },
       {
         id: 2,
-        tag: "Bedroom",
+        tag: "Arhitecture",
         title_1: "Let’s Get Solution for Building Construction Work",
         img_1_src: "./img/Photo_15.png",
         img_1_alt: "Photo_15",
@@ -160,7 +160,7 @@ new Vue({
       },
       {
         id: 4,
-        tag: "Arhitecture",
+        tag: "Architecture",
         title_1: "Let’s Get Solution for Building Construction Work",
         img_1_src: "./img/Photo_15.png",
         img_1_alt: "Photo_15",
@@ -259,6 +259,8 @@ new Vue({
           "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.",
       },
     ],
+    filter_flag: false,
+    filter_tag:"",
     tags: [
       "Kitchen",
       "Bedroom",
@@ -266,5 +268,22 @@ new Vue({
       "Architecture",
       "Kitchen Planning",
     ],
+  },
+
+  methods:{
+    filter (tag){
+      this.filter_flag = true;
+      this.filter_tag = tag;
+    }
+  },
+
+  computed: {
+    filterList: function () {
+      if (this.filter_flag) {
+        return this.detailedArticles.filter((article) => article.tag === this.filter_tag);
+      } else {
+        return this.detailedArticles;
+      }
+    },
   },
 });

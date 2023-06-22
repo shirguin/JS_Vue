@@ -797,6 +797,11 @@ body {
         color: $headingTextColor;
         border-radius: 10px;
         border: none;
+
+        &__active {
+          background-color: $headingTextColor;
+          color: #ffffff;
+        }
       }
 
       &__button:hover {
